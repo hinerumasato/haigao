@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/fragments :: include"></head>
+
+<head>
+    <title>Tin tức</title>
+</head>
+
+<body>
+    <header th:replace="layout/fragments :: header"></header>
+
+    <div class="grid">
+        <div class="page_title">
+            <h2 class="page_title_title">TIN TỨC</h2>
+        </div>
+
+        <div class="container news-container">
+            <div class="container_left news-container_left">
+                <div th:replace="layout/fragments :: product-widget"></div>
+                <div th:replace="layout/fragments :: news-widget"></div>
+            </div>
+            <div class="container_right news-container_right">
+
+                <div class="news_item">
+                    <img th:src="@{/img/news/news1.jpg}" alt="" class="news_item_img">
+                    <div class="news_item_info">
+                        <h2 class="news_item_info_title">
+                            Gạo Đài Loan: Vụ mới, thơm ngon, giá tốt, cần tìm đại lý phân phối.
+                        </h2>
+                        <p class="news_item_info_description">
+                            Gạo Đài Loan có nguồn gốc từ giống lúa Đài Thơm 8, được nghiên cứu và lai tạo từ tổ hợp lai
+                            giữa giống mẹ là BVN và giống bố là OM 4900 (BVN/OM4900). Sau khi làm thuần, dòng này được
+                            mã
+                            hóa và đặt
+
+                        </p>
+
+                        <a href="" class="news_item_info_link">Xem tiếp</a>
+                    </div>
+                </div>
+
+
+                <div class="news_item">
+                    <img th:src="@{/img/news/news2.jpg}" alt="" class="news_item_img">
+                    <div class="news_item_info">
+                        <h2 class="news_item_info_title">
+                            Gạo Việt Nam xuất khẩu tăng cao những tháng cuối năm
+                        </h2>
+                        <p class="news_item_info_description">
+                            Theo số liệu thống kê quốc tế, tính đến giữa tháng 6-2017, xuất khẩu gạo Việt Nam đạt trên
+                            2,9 triệu tấn, tăng trên 27% so với cùng ký năm ngoái. Việt Nam là quốc gia có tốc độ tăng
+                            trưởng xuất khẩu gạo cao
+                        </p>
+
+                        <a href="" class="news_item_info_link">Xem tiếp</a>
+                    </div>
+                </div>
+
+
+                <div class="news_item">
+                    <img th:src="@{/img/news/news3.jpg}" alt="" class="news_item_img">
+                    <div class="news_item_info">
+                        <h2 class="news_item_info_title">
+                            Việt Nam xuất khẩu 4 triệu tấn gạo vào năm 2030
+                        </h2>
+                        <p class="news_item_info_description">
+                            Mức mục tiêu xuất khẩu gạo của Việt Nam sau 13 năm nữa vẫn giữ ngang bằng so với hiện tại là
+                            4 triệu tấn. Cụ thể, năm 2020 lượng gạo xuất khẩu của Việt Nam khoảng 4,5-5 triệu tấn, trị
+                            giá bình quân 2,2-2,3
+                        </p>
+
+                        <a href="" class="news_item_info_link">Xem tiếp</a>
+                    </div>
+                </div>
+
+
+                <div class="news_item">
+                    <img th:src="@{/img/news/news4.jpg}" alt="" class="news_item_img">
+                    <div class="news_item_info">
+                        <h2 class="news_item_info_title">
+                            Phải làm gì khi mất thị trường xuất khẩu gạo truyền thống?
+                        </h2>
+                        <p class="news_item_info_description">
+                            GS. Võ Tòng Xuân cho rằng, bởi đi đâu cũng “chạm mặt” gạo Thái Lan nên gạo Việt Nam phải
+                            “đẹp và sạch” thì mới chen vào được các thị trường khác. Nguy cơ mất thị trường truyền thống
+                            Nếu như năm 2016 vừa qua
+
+                        </p>
+
+                        <a href="" class="news_item_info_link">Xem tiếp</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="layout/fragments :: footer"></footer>
+    <script th:replace="layout/fragments :: script"></script>
+</body>
+
+</html>

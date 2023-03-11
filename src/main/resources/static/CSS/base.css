@@ -1,0 +1,28 @@
+:root {
+    --menu-color: #00B10E;
+    --phone-color: #FF3737;
+    --price-color: #FF0000;
+    --container-background: #EDEDED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_left {
+    width: calc(30% - 20px);
+}
+
+.container_right {
+    width: calc(70% - 20px);
+}

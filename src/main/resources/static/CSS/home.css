@@ -1,0 +1,177 @@
+.slider {
+    height: 474px;
+}
+
+.slider_img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_rice_list {
+    margin-top: 48px;
+    list-style: none;
+    display: flex;
+}
+
+.menu_rice_item {
+    flex-grow: 2;
+}
+
+.menu_rice_link {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+}
+
+.menu_rice_link_desription {
+    padding: 8px;
+}
+
+.menu_rice_link_desription > h2 {
+    font-size: 16px;
+}
+
+.menu_rice_link_desription > p {
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+.top_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-container {
+    margin-top: 48px;
+    background-color: var(--container-background);
+    padding-bottom: 40px;
+}
+
+.top_product_img {
+    margin: 24px 0;
+    width: 88px;
+    height: 49px;
+}
+
+.top_product_title {
+    margin-bottom: 24px;
+    font-size: 25.6px;
+    color: var(--menu-color);
+}
+
+.rice_row {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rice_col {
+    background-color: #fff;
+    width: calc(100% / 4 - 20px);
+}
+
+.rice_col_img {
+    display: block;
+    width: 100%;
+    height: 264px;
+}
+
+.rice_col_info {
+    padding: 24px;
+}
+
+.rice_col_title {
+    font-size: 18.4px;
+    color: var(--menu-color);
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.rice_col_price {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--price-color);
+}
+
+.about-us {
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 24px 0;
+}
+
+.about-us_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us_left {
+    width: 48%;
+}
+
+.about-us_left_img {
+    display: block;
+    width: 100%;
+    height: 403.5px;
+}
+
+.about-us_right {
+    width: 48%;
+}
+
+
+.about-us_right_title {
+    font-size: 25.6px;
+    color: var(--menu-color);
+    margin-bottom: 20.8px;
+}
+
+.about-us_right > p {
+    font-size: 16px;
+    margin-bottom: 20.8px;
+    line-height: 1.6em;
+}
+
+.about-us_right_more {
+    display: inline-block;
+    color: var(--menu-color);
+    border: solid 1px var(--menu-color);
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15.52px;
+    transition: all .3s;
+}
+
+.about-us_right_more:hover {
+    background-color: var(--menu-color);
+    color: #fff;
+}
+
+.home_news_list {
+    display: flex;
+    justify-content: space-between;
+}
+.home_news_item {
+    background-color: #fff;
+    width: calc(100% / 4 - 20px);
+}
+.home_news_link {
+    color: #000;
+    text-decoration: none;
+
+}
+.home_news_link_img {
+    display: block;
+    width: 100%;
+    height: 263.4px;
+}
+
+.home_news_info {
+    padding: 16px;
+}
+
+.home_news_description {
+    text-align: center;
+}

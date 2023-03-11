@@ -1,0 +1,245 @@
+<head th:fragment="include">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/CSS/base.css}">
+    <link rel="stylesheet" th:href="@{/CSS/header.css}">
+    <link rel="stylesheet" th:href="@{/CSS/footer.css}">
+    <link rel="stylesheet" th:href="@{/CSS/grid.css}">
+    <link rel="stylesheet" th:href="@{/CSS/home.css}">
+    <link rel="stylesheet" th:href="@{/CSS/about.css}">
+    <link rel="stylesheet" th:href="@{/CSS/widget.css}">
+    <link rel="stylesheet" th:href="@{/CSS/news.css}">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" th:href="@{/CSS/admin/add-product.css}">
+</head>
+
+<header th:fragment="header">
+
+    <div class="info_header_wrap">
+        <div class="grid">
+            <div class="info_header">
+
+
+                <div class="info_header_left">
+                    <div class="info_header_left_item info_header_left_email">
+                        <i class="fa-solid fa-envelope"></i>
+                        admin@webbachthang.com
+                    </div>
+                    <div class="info_header_left_item info_header_left_hour">
+                        <i class="fa-solid fa-clock"></i>
+                        08:00 - 22:00
+                    </div>
+                    <div class="info_header_left_item info_header_left_phone">
+                        <i class="fa-solid fa-phone"></i>
+                        058 2218 182
+                    </div>
+                </div>
+                <div class="info_header_right">
+                    <a href="" class="info_header_right_link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" class="info_header_right_link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="info_header_right_link"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="info_header_right_link"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="main_header">
+            <div class="main_header_left c-4">
+                <img th:src="@{/Img/Logo/logo5.png}" alt="" class="main_header_left_img">
+            </div>
+            <div class="main_header_mid c-4">
+                <input placeholder="Tìm kiếm..." type="text" class="main_header_mid_input">
+                <i class="fa-solid fa-magnifying-glass main_header_mid_icon"></i>
+            </div>
+            <div class="main_header_right c-4">
+                <div class="main_header_right_hotline">
+                    <div class="main_header_right_hotline_wrap">
+                        <i class="fa-solid fa-phone main_header_right_hotline_icon"></i>
+                        <div class="main_header_right_hotline_info">
+                            <div class="">Hotline:</div>
+                            <div class="main_header_right_hotline_info_phone_number">058 2218 182</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="nav_header">
+        <ul class="nav_header_list">
+            <li class="nav_header_item">
+                <a href="/trang-chu" class="nav_header_item_link">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                </a>
+            </li>
+            <li class="nav_header_item"><a href="/gioi-thieu" class="nav_header_item_link">Giới thiệu</a></li>
+            <li class="nav_header_item"><a href="/san-pham" class="nav_header_item_link">Các loại gạo</a></li>
+            <li class="nav_header_item"><a href="/tin-tuc" class="nav_header_item_link">Tin tức</a></li>
+            <li class="nav_header_item"><a href="/lien-he" class="nav_header_item_link">Liên hệ</a></li>
+        </ul>
+    </nav>
+</header>
+
+<footer th:fragment="footer">
+    <div class="grid">
+        <div class="footer_wrap">
+            <div class="footer_list contact_list">
+                <h2 class="footer_title contact_title">LIÊN HỆ</h2>
+                <h2 class="contact_sub-title">HAI GẠO</h2>
+
+                <div class="footer_item contact_item"><i class="fa-solid fa-caret-right"></i>Địa chỉ: 59 Hồng Bàng, P.
+                    Tân Lập, TP. Nha Trang</div>
+                <div class="footer_item contact_item"><i class="fa-solid fa-caret-right"></i>Hotline: 058 2218 182</div>
+                <div class="footer_item contact_item"><i class="fa-solid fa-caret-right"></i>Zalo: 0986 048 004</div>
+                <div class="footer_item contact_item"><i class="fa-solid fa-caret-right"></i>Email:
+                    admin@webbachthang.com</div>
+
+            </div>
+            <div class="footer_list about-us_list">
+                <h2 class="footer_title about-us_title">VỀ CHÚNG TÔI</h2>
+                <div class="footer_item about-us_item"><i class="fa-solid fa-caret-right"></i>Giới thiệu chung</div>
+                <div class="footer_item about-us_item"><i class="fa-solid fa-caret-right"></i>Giá trị cốt lõi</div>
+                <div class="footer_item about-us_item"><i class="fa-solid fa-caret-right"></i>Lịch sử phát triển</div>
+                <div class="footer_item about-us_item"><i class="fa-solid fa-caret-right"></i>Sơ đồ tổ chức</div>
+                <div class="footer_item about-us_item"><i class="fa-solid fa-caret-right"></i>Liên hệ</div>
+            </div>
+            <div class="footer_list support_list">
+                <h2 class="footer_title support_title">HỖ TRỢ KHÁCH HÀNG</h2>
+                <div class="footer_item support_item"><i class="fa-solid fa-caret-right"></i>Hướng dẫn mua hàng trực
+                    tuyến</div>
+                <div class="footer_item support_item"><i class="fa-solid fa-caret-right"></i>Chính sách vận chuyển</div>
+                <div class="footer_item support_item"><i class="fa-solid fa-caret-right"></i>Chính sách đổi trả, hoàn
+                    tiền</div>
+                <div class="footer_item support_item"><i class="fa-solid fa-caret-right"></i>Chính sách thanh toán</div>
+                <div class="footer_item support_item"><i class="fa-solid fa-caret-right"></i>Chính sách bảo mật thông
+                    tin</div>
+                <div class="footer_item support_item"><i class="fa-solid fa-caret-right"></i>Chính sách ưu đãi</div>
+            </div>
+            <div class="footer_list">
+                <h2 class="footer_title">LIÊN KẾT FACEBOOK</h2>
+                <a href="https://www.facebook.com/profile.php?id=100037052294325">
+                    <img th:src="@{/img/contact/facebook.jpg}" alt="" class="facebook_img">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="product-widget widget" th:fragment="product-widget">
+    <h2 class="product-widget_title widget_title">SẢN PHẨM MỚI</h2>
+    <ul class="widget_list product-widget_list">
+        <li class="widget_item product-widget_item">
+            <a href="" class="widget_link product-widget_link">
+                <img th:src="@{img/product/product1.jpg}" alt="" class="widget_link_img product-widget_link_img">
+                <div class="widget_link_info product-widget_link_info">
+                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp hương</h4>
+                    <p class="product-widget_link_info_price">35,000 ₫</p>
+                </div>
+            </a>
+        </li>
+
+        <li class="widget_item product-widget_item">
+            <a href="" class="widget_link product-widget_link">
+                <img th:src="@{img/product/product2.jpg}" alt="" class="widget_link_img product-widget_link_img">
+                <div class="widget_link_info product-widget_link_info">
+                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp cẩm</h4>
+                    <p class="product-widget_link_info_price">45,000 ₫</p>
+                </div>
+            </a>
+        </li>
+
+        <li class="widget_item product-widget_item">
+            <a href="" class="widget_link product-widget_link">
+                <img th:src="@{img/product/product3.jpg}" alt="" class="widget_link_img product-widget_link_img">
+                <div class="widget_link_info product-widget_link_info">
+                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp Tú Lệ</h4>
+                    <p class="product-widget_link_info_price">35,000 ₫</p>
+                </div>
+            </a>
+        </li>
+
+        <li class="widget_item product-widget_item">
+            <a href="" class="widget_link product-widget_link">
+                <img th:src="@{img/product/product4.jpg}" alt="" class="widget_link_img product-widget_link_img">
+                <div class="widget_link_info product-widget_link_info">
+                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp ốc</h4>
+                    <p class="product-widget_link_info_price">15,000 ₫</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="news-widget widget" th:fragment="news-widget">
+    <h2 class="news-widget_title widget_title">TIN TỨC</h2>
+    <ul class="widget_list news-widget_list">
+        <li class="widget_item news-widget_item">
+            <a href="" class="widget_link news-widget_link">
+                <img th:src="@{img/news/news1.jpg}" alt="" class="widget_link_img news-widget_link_img">
+                <div class="widget_link_info news-widget_link_info">
+                    <h4 class="widget_link_info_title news-widget_link_info_title">
+                        Gạo Đài Loan: Vụ mới, thơm ngon, giá
+                        tốt, cần tìm đại lý phân phối.
+                    </h4>
+                </div>
+            </a>
+        </li>
+
+        <li class="widget_item news-widget_item">
+            <a href="" class="widget_link news-widget_link">
+                <img th:src="@{img/news/news2.jpg}" alt="" class="widget_link_img news-widget_link_img">
+                <div class="widget_link_info news-widget_link_info">
+                    <h4 class="widget_link_info_title news-widget_link_info_title">
+                        Gạo Việt Nam xuất khẩu tăng cao những tháng cuối năm
+                    </h4>
+                </div>
+            </a>
+        </li>
+
+        <li class="widget_item news-widget_item">
+            <a href="" class="widget_link news-widget_link">
+                <img th:src="@{img/news/news3.jpg}" alt="" class="widget_link_img news-widget_link_img">
+                <div class="widget_link_info news-widget_link_info">
+                    <h4 class="widget_link_info_title news-widget_link_info_title">
+                        Việt Nam xuất khẩu 4 triệu tấn gạo vào năm 2030
+                    </h4>
+                </div>
+            </a>
+        </li>
+
+        <li class="widget_item news-widget_item">
+            <a href="" class="widget_link news-widget_link">
+                <img th:src="@{img/news/news4.jpg}" alt="" class="widget_link_img news-widget_link_img">
+                <div class="widget_link_info news-widget_link_info">
+                    <h4 class="widget_link_info_title news-widget_link_info_title">
+                        Phải làm gì khi mất thị trường xuất khẩu gạo truyền thống?
+                    </h4>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="script" th:fragment="script">
+    <script th:src="@{/js/header.js}"></script>
+
+    <!-- Utils -->
+    <script th:src="@{/js/utils/price.js}"></script>
+
+</div>

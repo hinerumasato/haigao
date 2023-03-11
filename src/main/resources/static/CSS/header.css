@@ -1,0 +1,134 @@
+.info_header_wrap {
+    background-color: #E3E3E3;
+}
+
+.info_header {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(102, 102, 102, 0.85);
+    padding: 8px 0;
+    font-size: 12.8px;
+}
+
+.info_header_left {
+    display: flex;
+
+}
+
+.info_header_left_item {
+    padding: 0 8px;
+    border-right: solid 1px #CCCCCC;
+}
+
+.info_header_left_item:last-child {
+    border: none;
+}
+
+.info_header_right_link {
+    margin-left: 8px;
+    text-decoration: none;
+    color: rgba(102, 102, 102, 0.85);
+    transition: all .3s;
+}
+
+.info_header_right_link:hover {
+    color: #000;
+}
+
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.main_header_left_img {
+    display: block;
+    width: 300px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main_header_mid {
+    display: flex !important;
+    height: 38px;
+    position: relative;
+}
+
+.main_header_mid_input {
+    border: solid 2px var(--menu-color);
+    border-radius: 30px;
+    display: block;
+    width: 80%;
+    padding: 0 16px;
+}
+
+.main_header_mid_input:focus {
+    border: solid 2px var(--menu-color);
+    outline: none !important;
+}
+
+.main_header_mid_icon {
+    text-align: center;
+    color: #fff;
+    background-color: var(--menu-color);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    right: 0;
+    top: 0px;
+    display: block;
+    width: 15%;
+    line-height: 38px;
+    position: absolute;
+    right: 20%;
+}
+
+.main_header_right_hotline_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.main_header_right_hotline_icon {
+    display: block;
+    color: var(--menu-color);
+    border: solid 1px var(--menu-color);
+    border-radius: 50%;
+    padding: 16px;
+    margin-right: 20px;
+}
+
+.main_header_right_hotline_info_phone_number {
+    color: var(--phone-color);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav_header {
+    height: 48px;
+    background-color: var(--menu-color);
+}
+
+.nav_header_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav_header_item {
+    padding: 0 16px;
+}
+
+.nav_header_item:hover>a {
+    color: yellow;
+}
+
+.nav_header_item_link {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all .3s;
+}

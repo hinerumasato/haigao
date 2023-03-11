@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/fragments :: include"></head>
+
+<head>
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <header th:replace="layout/fragments :: header"></header>
+    <div class="slider">
+        <img th:src="@{/Img/Sliders/slider1.jpg}" alt="" class="slider_img">
+    </div>
+
+    <div class="grid menu_rice">
+        <ul class="menu_rice_list">
+            <li class="menu_rice_item">
+                <a href="" class="menu_rice_link">
+                    <img th:src="@{/img/icon-rice/icon-rice1.jpg}" alt="" class="menu_rice_link_img">
+                    <div class="menu_rice_link_desription">
+                        <h2>GẠO NGON THƯỢNG HẠNG</h2>
+                        <p>Là dòng sản phẩm của những thương hiệu có uy tín nhất trên …</p>
+                    </div>
+                </a>
+            </li>
+            <li class="menu_rice_item">
+                <a href="" class="menu_rice_link">
+                    <img th:src="@{/img/icon-rice/icon-rice2.jpg}" alt="" class="menu_rice_link_img">
+                    <div class="menu_rice_link_desription">
+                        <h2>GẠO ĐẶC SẢN</h2>
+                        <p>Là dòng sản phẩm của những thương hiệu có uy tín nhất trên …</p>
+                    </div>
+                </a>
+            </li>
+            <li class="menu_rice_item">
+                <a href="" class="menu_rice_link">
+                    <img th:src="@{/img/icon-rice/icon-rice3.jpg}" alt="" class="menu_rice_link_img">
+                    <div class="menu_rice_link_desription">
+                        <h2>GẠO THÔNG DỤNG</h2>
+                        <p>Là dòng sản phẩm của những thương hiệu có uy tín nhất trên …</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="menu_rice_list">
+            <li class="menu_rice_item">
+                <a href="" class="menu_rice_link">
+                    <img th:src="@{/img/icon-rice/icon-rice4.jpg}" alt="" class="menu_rice_link_img">
+                    <div class="menu_rice_link_desription">
+                        <h2>GẠO NẾP</h2>
+                        <p>Là dòng sản phẩm của những thương hiệu có uy tín nhất trên …</p>
+                    </div>
+                </a>
+            </li>
+            <li class="menu_rice_item">
+                <a href="" class="menu_rice_link">
+                    <img th:src="@{/img/icon-rice/icon-rice5.jpg}" alt="" class="menu_rice_link_img">
+                    <div class="menu_rice_link_desription">
+                        <h2>GẠO TÁM</h2>
+                        <p>Là dòng sản phẩm của những thương hiệu có uy tín nhất trên …</p>
+                    </div>
+                </a>
+            </li>
+            <li class="menu_rice_item">
+                <a href="" class="menu_rice_link">
+                    <img th:src="@{/img/icon-rice/icon-rice6.jpg}" alt="" class="menu_rice_link_img">
+                    <div class="menu_rice_link_desription">
+                        <h2>GẠO TẤM</h2>
+                        <p>Là dòng sản phẩm của những thương hiệu có uy tín nhất trên …</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="home-container">
+        <div class="grid">
+            <div class="top_product">
+                <img th:src="@{/img/icon-rice/n_title_tree.png}" alt="" class="top_product_img">
+                <h2 class="top_product_title">SẢN PHẨM NỔI BẬT CỦA HAI GẠO</h2>
+                <p class="top_product_description">Nông sản sạch 100%</p>
+            </div>
+        </div>
+
+        <div class="grid rice_list">
+            <div class="rice_row">
+                <div th:each="i : ${#numbers.sequence(0, 3, 1)}" class="rice_col">
+                    <img th:src="${rices.get(i).image}" alt="" class="rice_col_img">
+                    <div class="rice_col_info">
+                        <h2 class="rice_col_title" th:text="${rices.get(i).name}"></h2>
+                        <p class="rice_col_price" th:text="${rices.get(i).price}"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="about-us">
+            <div class="grid">
+                <div class="about-us_wrap">
+                    <div class="about-us_left">
+                        <img th:src="@{/img/banner/banner.jpg}" alt="" class="about-us_left_img">
+                    </div>
+                    <div class="about-us_right">
+                        <h2 class="about-us_right_title">SƠ LƯỢC VỀ CHÚNG TÔI</h2>
+                        <p>
+                            Với xu thế hội nhập và phát triển thương hiệu các loại gạo đặc sản từ mọi miền quê của tổ
+                            quốc. Chúng ta đang dần vươn tới vị trí số một thế giới trong xuất khẩu gạo.
+                            <b>Hai Gạo</b> ra đời cũng không ngoài mục tiêu góp phần nâng cao chất lượng cuộc sống, bình
+                            ổn
+                            giá
+                            thị trường và trở thành website bán gạo trực tuyến số một tại Việt Nam.
+                        </p>
+
+                        <p>
+                            <b>Hai Gạo </b>sẽ là nơi hội tụ tất cả các loại gạo đặc sản đất Việt và hy vọng góp phần
+                            nhỏ bé vào bữa ăn ngon của hàng triệu gia đình mỗi ngày qua các loại gạo ngon hảo hạng cùng
+                            với các dịch vụ chuyên nghiệp nhất, phù hợp với cuộc sống hiện đạ
+                        </p>
+
+                        <a class="about-us_right_more" href="/gioi-thieu">Xem tiếp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="top_product">
+                <img th:src="@{/img/icon-rice/n_title_tree.png}" alt="" class="top_product_img">
+                <h2 class="top_product_title">TIN TỨC & SỰ KIỆN</h2>
+            </div>
+
+            <div class="home_news_list">
+
+                <div class="home_news_item">
+                    <a href="" class="home_news_link">
+                        <img th:src="@{/img/news/news1.jpg}" alt="" class="home_news_link_img">
+                        <div class="home_news_info">
+                            <div class="home_news_description">
+                                Gạo Đài Loan: Vụ mới, thơm ngon, giá tốt, cần tìm đại lý phân phối.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="home_news_item">
+                    <a href="" class="home_news_link">
+                        <img th:src="@{/img/news/news2.jpg}" alt="" class="home_news_link_img">
+                        <div class="home_news_info">
+                            <div class="home_news_description">
+                                Gạo Việt Nam xuất khẩu tăng cao những tháng cuối năm
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="home_news_item">
+                    <a href="" class="home_news_link">
+                        <img th:src="@{/img/news/news3.jpg}" alt="" class="home_news_link_img">
+                        <div class="home_news_info">
+                            <div class="home_news_description">
+                                Gạo Việt Nam xuất khẩu 4 triệu tấn vào năm 2030
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="home_news_item">
+                    <a href="" class="home_news_link">
+                        <img th:src="@{/img/news/news4.jpg}" alt="" class="home_news_link_img">
+                        <div class="home_news_info">
+                            <div class="home_news_description">
+                                Phải làm gì khi mất thị trường xuất khẩu gạo truyền thống?
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer th:replace="layout/fragments :: footer"></footer>
+    <script th:replace="layout/fragments :: script"></script>
+    <script>
+        formatPrice(".rice_col_price");
+    </script>
+
+</body>
+
+</html>

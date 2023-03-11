@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/fragments :: include"></head>
+
+<head>
+    <title>Giới thiệu</title>
+</head>
+
+<body>
+    <header th:replace="layout/fragments :: header"></header>
+
+    <div class="container about-container grid">
+        <div class="container_left about-container_left">
+            <div th:replace="layout/fragments :: product-widget"></div>
+            <div th:replace="layout/fragments :: news-widget"></div>
+        </div>
+        <div class="container_right about-container_right">
+            <h1 class="about_title">GIỚI THIỆU</h1>
+            <div class="about_description">
+                <p>
+                    Với xu thế hội nhập và phát triển thương hiệu các loại gạo đặc sản từ mọi miền quê của tổ quốc.
+                    Chúng ta
+                    đang dần vươn tới vị trí số một thế giới trong xuất khẩu gạo. <b>Hai gạo</b> ra đời cũng không ngoài
+                    mục tiêu góp phần nâng cao chất lượng cuộc sống, bình ổn giá thị trường và trở thành website bán gạo
+                    trực tuyến số một tại Việt Nam.
+                </p>
+
+                <p style="margin-top: 30px;">
+                    <b>Hai gạo</b> sẽ là nơi hội tụ tất cả các loại gạo đặc sản đất Việt và hy vọng góp phần nhỏ bé vào
+                    bữa ăn ngon của hàng triệu gia đình mỗi ngày qua các loại gạo ngon hảo hạng cùng với các dịch vụ
+                    chuyên
+                    nghiệp nhất, phù hợp với cuộc sống hiện đại
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="layout/fragments :: footer"></footer>
+    <script th:replace="layout/fragments :: script"></script>
+    
+</body>
+
+</html>

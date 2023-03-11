@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/fragments :: include"></head>
+
+<head>
+    <title>Thêm sản phẩm</title>
+</head>
+<body>
+    <h2 class="add_new_product_title grid">Thêm mới sản phẩm</h2>
+    <form action="/admin/add-product/save" class="add_new_product_form grid" th:method="POST" enctype="multipart/form-data">
+            
+        <div class="group">
+            <h2 class="group_title">Tên sản phẩm</h2>
+            <input type="text" class="group_input name_input" placeholder="Nhập tên sản phẩm" name="name">
+        </div>
+
+        <div class="group">
+            <h2 class="group_title">Giá</h2>
+            <input type="number" class="group_input price_input" placeholder="Nhập giá" name="price">
+        </div>
+
+        <div class="group">
+            <h2 class="group_title">Số lượng</h2>
+            <input type="number" class="group_input amount_input" placeholder="Nhập số lượng (kg)" name="kilograms">
+        </div>
+
+        <div class="group">
+            <h2 class="group_title">Thương hiệu</h2>
+            <input type="text" class="group_input brand_input" placeholder="Thương hiệu" name="brand">
+        </div>
+
+        <div class="group">
+            <h2 class="group_title">Mô tả</h2>
+            <textarea name="description" class="group_input description_input" cols="30" rows="10" placeholder="Thêm mô tả"></textarea>
+        </div>
+
+        <div class="group">
+            <h2 class="group_title">Ảnh sản phẩm</h2>
+            <input type="file" class="group_input image_input" name="image">
+        </div>
+
+        <button class="add_new_product_form_btn" type="submit">Thêm mới</button>
+    </form>
+</body>
+</html>

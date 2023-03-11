@@ -1,0 +1,22 @@
+.about-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    /* height: 900px; */
+}
+
+.about-container_left {
+    width: calc(30% - 20px);
+}
+
+.about-container_right {
+    width: calc(70% - 20px);
+}
+
+.about_title {
+    margin-bottom: 30px;
+}
+
+.about_description {
+    line-height: 1.6em;
+}

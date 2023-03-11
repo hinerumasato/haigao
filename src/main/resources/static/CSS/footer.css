@@ -1,0 +1,51 @@
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.footer_list {
+    width: calc(100% / 4 - 20px);
+}
+
+.footer_title {
+    font-size: 20px;
+    color: var(--menu-color);
+    margin-bottom: 15px;
+}
+
+.footer_item {
+    font-size: 16px;
+    border-bottom: dotted 1px #000;
+    padding: 8px 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer_item:hover {
+    color: var(--menu-color);
+}
+
+.contact_item {
+    border: none;
+    cursor: text;
+}
+
+.contact_item:hover {
+    color: #000;
+}
+
+.contact_sub-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.fa-solid.fa-caret-right {
+    margin-right: 6px;
+}
+
+.facebook_img {
+    width: 100%;
+}
