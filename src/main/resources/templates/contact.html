@@ -1,0 +1,67 @@
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/fragments :: include"></head>
+
+<head>
+    <title>Liên Hệ</title>
+</head>
+
+<body>
+    <header th:replace="layout/fragments :: header"></header>
+
+    <div class="grid">
+        <div class="container contact-container">
+            <div class="container-left contact-container_left">
+                <h2 class="contact-container_left_title">LIÊN HỆ</h2>
+                <p class="contact-container_left_shop-name">Gạo ngon Hai Gạo</p>
+                <ul class="contact-container_left_address_list">
+                    <li class="contact-container_left_address_item">Địa chỉ: </li>
+                    <li class="contact-container_left_address_item">Số điện thoại:</li>
+                    <li class="contact-container_left_address_item">Email: </li>
+                </ul>
+
+                <form action="" class="contact-container_left_form">
+                    <div class="contact_group">
+                        <h2 class="contact_group_title">Tên của bạn (bắt buộc)</h2>
+                        <input class="contact_group_input" type="text" placeholder="">
+                    </div>
+
+                    <div class="contact_group">
+                        <h2 class="contact_group_title">Địa chỉ email (bắt buộc)</h2>
+                        <input class="contact_group_input" type="text" placeholder="">
+                    </div>
+
+                    <div class="contact_group">
+                        <h2 class="contact_group_title">Số điện thoại (bắt buộc)</h2>
+                        <input class="contact_group_input" type="text" placeholder="">
+                    </div>
+
+                    <div class="contact_group">
+                        <h2 class="contact_group_title">Tiêu đề:</h2>
+                        <input class="contact_group_input" type="text" placeholder="">
+                    </div>
+
+                    <div class="contact_group">
+                        <h2 class="contact_group_title">Thông điệp</h2>
+                        <textarea name="" class="contact_group_area"></textarea>
+                    </div>
+                </form>
+
+            </div>
+            <div class="container-right contact-container_right">
+                <div class="container_right_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.3887301388879!2d109.18893462936096!3d12.24084140000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3170677e6f7349f7%3A0x925faeb3e76b3171!2sHong%20Hair%20Salon!5e0!3m2!1svi!2s!4v1678945023232!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="layout/fragments :: footer"></footer>
+    <script th:replace="layout/fragments :: script"></script>
+</body>
+
+</html>

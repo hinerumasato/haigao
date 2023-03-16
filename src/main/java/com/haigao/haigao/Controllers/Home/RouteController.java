@@ -22,7 +22,7 @@ public class RouteController {
     public ModelAndView home() {
         riceSerivce = new RiceServiceImpl();
         ModelAndView mv = new ModelAndView("index.html");
-        mv.addObject("rices", riceSerivce.findAll());
+        // mv.addObject("rices", riceSerivce.findAll());
         return mv;
     }
 
@@ -34,5 +34,10 @@ public class RouteController {
     @GetMapping("/tin-tuc")
     public ModelAndView news() {
         return new ModelAndView("news.html");
+    }
+
+    @GetMapping("/lien-he")
+    public ModelAndView contact() {
+        return new ModelAndView("contact.html");
     }
 }
