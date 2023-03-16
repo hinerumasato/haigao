@@ -17,10 +17,6 @@
     font-size: 26px;
 }
 
-.contact-container_left_address_list {
-
-}
-
 .contact-container_left_address_item {
     margin: 16px 0 16px 50px;
 }
@@ -47,4 +43,20 @@
 
 .container_right_map {
     margin-top: 40px;
+}
+
+.contact_group_btn {
+    padding: 16px;
+    background-color: #185BA9;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    outline: none !important;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.contact_group_btn:hover {
+    background-color: #0a305c;
 }
