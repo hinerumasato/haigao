@@ -22,7 +22,7 @@ public class RouteController {
     public ModelAndView home() {
         riceSerivce = new RiceServiceImpl();
         ModelAndView mv = new ModelAndView("index.html");
-        // mv.addObject("rices", riceSerivce.findAll());
+        mv.addObject("rices", riceSerivce.findAll());
         return mv;
     }
 
