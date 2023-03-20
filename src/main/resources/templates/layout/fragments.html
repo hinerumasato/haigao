@@ -23,6 +23,7 @@
     <link rel="stylesheet" th:href="@{/CSS/widget.css}">
     <link rel="stylesheet" th:href="@{/CSS/news.css}">
     <link rel="stylesheet" th:href="@{/CSS/contact.css}">
+    <link rel="stylesheet" th:href="@{/CSS/product.css}">
 
     <!-- Admin CSS -->
     <link rel="stylesheet" th:href="@{/CSS/admin/add-product.css}">
@@ -145,42 +146,12 @@
 <div class="product-widget widget" th:fragment="product-widget">
     <h2 class="product-widget_title widget_title">SẢN PHẨM MỚI</h2>
     <ul class="widget_list product-widget_list">
-        <li class="widget_item product-widget_item">
+        <li th:each="i : ${#numbers.sequence(0, 3, 1)}" class="widget_item product-widget_item">
             <a href="" class="widget_link product-widget_link">
-                <img th:src="@{img/product/product1.jpg}" alt="" class="widget_link_img product-widget_link_img">
+                <img th:src="${rices.get(i).image}" alt="" class="widget_link_img product-widget_link_img">
                 <div class="widget_link_info product-widget_link_info">
-                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp hương</h4>
-                    <p class="product-widget_link_info_price">35,000 ₫</p>
-                </div>
-            </a>
-        </li>
-
-        <li class="widget_item product-widget_item">
-            <a href="" class="widget_link product-widget_link">
-                <img th:src="@{img/product/product2.jpg}" alt="" class="widget_link_img product-widget_link_img">
-                <div class="widget_link_info product-widget_link_info">
-                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp cẩm</h4>
-                    <p class="product-widget_link_info_price">45,000 ₫</p>
-                </div>
-            </a>
-        </li>
-
-        <li class="widget_item product-widget_item">
-            <a href="" class="widget_link product-widget_link">
-                <img th:src="@{img/product/product3.jpg}" alt="" class="widget_link_img product-widget_link_img">
-                <div class="widget_link_info product-widget_link_info">
-                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp Tú Lệ</h4>
-                    <p class="product-widget_link_info_price">35,000 ₫</p>
-                </div>
-            </a>
-        </li>
-
-        <li class="widget_item product-widget_item">
-            <a href="" class="widget_link product-widget_link">
-                <img th:src="@{img/product/product4.jpg}" alt="" class="widget_link_img product-widget_link_img">
-                <div class="widget_link_info product-widget_link_info">
-                    <h4 class="widget_link_info_title product-widget_link_info_title">Gạo nếp ốc</h4>
-                    <p class="product-widget_link_info_price">15,000 ₫</p>
+                    <h4 class="widget_link_info_title product-widget_link_info_title" th:text="${rices.get(i).name}"></h4>
+                    <p class="product-widget_link_info_price" th:text="${rices.get(i).price}"></p>
                 </div>
             </a>
         </li>
@@ -241,6 +212,6 @@
     <script th:src="@{/js/header.js}"></script>
 
     <!-- Utils -->
-    <script th:src="@{/js/utils/price.js}"></script>
-
+    <script type="module" th:src="@{/js/utils/price.js}"></script>
+    <script type="module" th:src="@{/js/utils/slug.js}"></script>
 </div>

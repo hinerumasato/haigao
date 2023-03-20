@@ -16,6 +16,7 @@ class Header {
         this.header.style.right = "0px";
         this.header.style.bottom = "0px";
         this.header.style.left = "0px";
+        this.header.style.zIndex = "9999";
     }
 
     unfixed() {

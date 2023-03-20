@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/fragments :: include"></head>
+<head>
+    <title>Sản phẩm</title>
+</head>
+<body>
+    <header th:replace="layout/fragments :: header"></header>
+
+    <div class="product-container grid">
+        <h2 class="product-container_title">CÁC SẢN PHẨM</h2>
+        <div class="product-container_list">
+            <div class="product-container_item" th:each="rice : ${rices}">
+                <a href="" class="product-container_link">
+                    <img th:src="${rice.image}" alt="" class="product-container_item_img">
+                    <h2 class="product-container_item_title" th:text="${rice.name}"></h2>
+                    <p class="product-container_item_price" th:text="${rice.price}"></p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="layout/fragments :: footer"></footer>
+    <script th:replace="layout/fragments :: script"></script>
+
+    <script type="module" th:src="@{/js/productManagement.js}"></script>
+</body>
+</html>

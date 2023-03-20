@@ -28,7 +28,8 @@ public class RouteController {
 
     @GetMapping("/gioi-thieu")
     public ModelAndView about() {
-        return new ModelAndView("about.html");
+        riceSerivce = new RiceServiceImpl();
+        return new ModelAndView("about.html").addObject("rices", riceSerivce.findAll());
     }
 
     @GetMapping("/tin-tuc")

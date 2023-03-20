@@ -18,7 +18,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @Controller
 @RestController
 
-public class ProductController {
+public class AdminProductController {
 
     private RiceService riceService;
 

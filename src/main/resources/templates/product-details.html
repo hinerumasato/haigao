@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/fragments :: include"></head>
+<head>
+    <title>Chi tiết sản phẩm</title>
+</head>
+
+<body>
+    <header th:replace="layout/fragments :: header"></header>
+
+    <h1>Path: <span th:text="${name}"></span></h1>
+
+    <footer th:replace="layout/fragments :: footer"></footer>
+    <script th:replace="layout/fragments :: script"></script>
+</body>
+</html>

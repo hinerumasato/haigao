@@ -10,7 +10,7 @@ public class FileUtils {
         String path = System.getProperty("user.dir");
         path = path.replaceAll("\\\\", "/");
         path += "/src/main/resources/static/Img/Uploads/";
-
+        
         String imagePath = image.getOriginalFilename().replaceAll("\\\\", "/");
         path += imagePath;
         image.transferTo(new File(path));

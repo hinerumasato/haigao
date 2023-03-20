@@ -13,3 +13,5 @@ function formatPrice(priceSelector) {
         element.textContent = (temp.length % 3 == 0) ? result.slice(1, result.length) + "đ" : result + "đ";
     })
 }
+
+export { formatPrice };
