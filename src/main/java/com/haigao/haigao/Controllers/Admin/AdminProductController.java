@@ -22,12 +22,12 @@ public class AdminProductController {
 
     private RiceService riceService;
 
-    @GetMapping("/admin/add-product")
+    @GetMapping("/admin/product/add-product")
     public ModelAndView addProductPage() {
         return new ModelAndView("admin/add-product.html");
     }
 
-    @PostMapping("/admin/add-product/save")
+    @PostMapping("/admin/product/add-product/save")
     public ModelAndView addNewProduct(HttpServletRequest request, @RequestParam("name") String name, @RequestParam("price") double price, @RequestParam("description") String description, @RequestParam("brand") String brand, @RequestParam("kilograms") double kilograms, @RequestParam("image") MultipartFile image) {
         riceService = new RiceServiceImpl();
         ModelAndView mv = new ModelAndView("admin/add-product.html");

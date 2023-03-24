@@ -24,9 +24,13 @@
     <link rel="stylesheet" th:href="@{/CSS/news.css}">
     <link rel="stylesheet" th:href="@{/CSS/contact.css}">
     <link rel="stylesheet" th:href="@{/CSS/product.css}">
+</head>
 
+<head th:fragment="admin-include">
     <!-- Admin CSS -->
-    <link rel="stylesheet" th:href="@{/CSS/admin/add-product.css}">
+    <!-- <link rel="stylesheet" th:href="@{/CSS/admin/add-product.css}"> -->
+    <link rel="stylesheet" th:href="@{/CSS/admin/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/CSS/admin/templatemo-style.css}">
 </head>
 
 <header th:fragment="header">
@@ -214,4 +218,10 @@
     <!-- Utils -->
     <script type="module" th:src="@{/js/utils/price.js}"></script>
     <script type="module" th:src="@{/js/utils/slug.js}"></script>
+</div>
+
+<div class="admin-script" th:fragment="admin-script">
+    <script th:src="@{js/admin/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{jquery-ui-datepicker/jquery-ui.min.js}"></script>
+    <script th:src="@{js/admin/bootstrap.min.js}"></script>
 </div>
