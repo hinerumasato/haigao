@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUtils {
     public static void upLoadFile(MultipartFile image) throws IllegalStateException, IOException {
         String path = System.getProperty("user.dir");
+        
         path = path.replaceAll("\\\\", "/");
         path += "/src/main/resources/static/Img/Uploads/";
 
@@ -26,5 +27,13 @@ public class FileUtils {
         result = result.replaceAll("\\\\", "/");
 
         return result;
+    }
+
+    public static void deleteImage(String imgPath) {
+        String path = System.getProperty("user.dir");
+        path = path.replaceAll("\\\\", "/");
+        path += "/src/main/resources/static" + imgPath;
+        File file = new File(path);
+        file.delete();
     }
 }

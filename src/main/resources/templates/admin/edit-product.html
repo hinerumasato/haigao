@@ -2,6 +2,7 @@
 <html lang="vi" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="layout/fragments :: include"></head>
+
 <head th:replace="layout/fragments :: admin-include"></head>
 
 <head>
@@ -80,54 +81,61 @@
                 <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="tm-block-title d-inline-block">Thêm sản phẩm</h2>
+                            <h2 class="tm-block-title d-inline-block">Chỉnh sửa sản phẩm</h2>
                         </div>
                     </div>
                     <div class="row tm-edit-product-row">
                         <div class="col-xl-6 col-lg-6 col-md-12">
-                            <form method="POST" action="/admin/product/save" class="tm-edit-product-form" enctype="multipart/form-data">
+                            <form th:data-id="${rice.id}" action="/admin/product/update/{id}" th:method="PUT"
+                                class="tm-edit-product-form" enctype="multipart/form-data">
                                 <div class="form-group mb-3">
                                     <label for="name">Tên sản phẩm
                                     </label>
-                                    <input id="name" name="name" type="text" class="form-control validate" required />
+                                    <input id="name" name="name" type="text" th:value="${rice.name}"
+                                        class="form-control validate" />
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="description">Mô tả</label>
-                                    <textarea name="description" class="form-control validate" rows="3" required></textarea>
+                                    <textarea name="description" class="form-control validate tm-small" rows="5"
+                                        th:text="${rice.description}" required></textarea>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="brand">Loại sản phẩm</label>
-                                    <input id="brand" name="brand" type="text" class="form-control validate"
-                                        data-large-mode="true" />
+                                    <input type="text" name="brand" id="brand" class="form-control validate"
+                                        th:value="${rice.brand}">
                                 </div>
                                 <div class="row">
                                     <div class="form-group mb-3 col-xs-12 col-sm-6">
                                         <label for="price">Giá
                                         </label>
-                                        <input id="price" name="price" type="number" class="form-control validate"
-                                            data-large-mode="true" />
+                                        <input id="price" name="price" type="text" th:value="${rice.price}"
+                                            class="form-control validate" data-large-mode="true" />
                                     </div>
                                     <div class="form-group mb-3 col-xs-12 col-sm-6">
                                         <label for="kilograms">Số lượng (Kg)
                                         </label>
-                                        <input id="kilograms" name="kilograms" type="number"
-                                            class="form-control validate" required />
+                                        <input id="kilograms" name="kilograms" type="text" th:value="${rice.kilograms}"
+                                            class="form-control validate" />
                                     </div>
                                 </div>
 
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                            <div class="tm-product-img-dummy mx-auto" onclick="document.getElementById('fileInput').click();">
-                                <i class="fas fa-cloud-upload-alt tm-upload-icon"></i>
+                            <div class="tm-product-img-edit mx-auto">
+                                <img style="height: 230px;" th:src="${rice.image}" alt="Product image" class="img-fluid d-block mx-auto">
+                                <i class="fas fa-cloud-upload-alt tm-upload-icon"
+                                    onclick="document.getElementById('fileInput').click();"></i>
                             </div>
                             <div class="custom-file mt-3 mb-3">
-                                <input id="fileInput" type="file" style="display:none;" name="image" onchange="renderImgFile(this)" required/>
-                                <input type="button" class="btn btn-primary btn-block mx-auto" value="TẢI HÌNH ẢNH LÊN"
+                                <input id="fileInput" type="file" style="display:none;" name="image"
+                                    onchange="renderImage(this)" th:value="${rice.image}" />
+                                <input type="button" class="btn btn-primary btn-block mx-auto" value="CHANGE IMAGE NOW"
                                     onclick="document.getElementById('fileInput').click();" />
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block text-uppercase">Thêm sản phẩm mới ngay</button>
+                            <button type="submit" class="btn btn-primary btn-block text-uppercase">CẬP NHẬT
+                                NGAY</button>
                         </div>
                         </form>
                     </div>
@@ -147,7 +155,40 @@
 
     <div class="admin-script" th:replace="layout/fragments :: admin-script"></div>
 
-    <script th:src="@{/js/utils/file.js}"></script>
+    <script>
+        function renderImage(fileInput) {
+            if (fileInput.files && fileInput.files[0]) {
+                let reader = new FileReader();
+                reader.onload = e => document.querySelector('img').setAttribute('src', e.target.result);
+                reader.readAsDataURL(fileInput.files[0])
+            }
+        }
+
+    </script>
+
+    <script>
+        const priceField = document.getElementById("price");
+        const kilogramsField = document.getElementById("kilograms");
+
+        let intPriceValue = parseInt(priceField.value, 10);
+        let intKilogramsValue = parseInt(kilogramsField.value, 10);
+
+        if (intPriceValue == priceField.value)
+            priceField.value = intPriceValue;
+
+        if (intKilogramsValue == kilogramsField.value)
+            kilogramsField.value = intKilogramsValue;
+
+    </script>
+
+    <script>
+        const updateForm = document.querySelector('form');
+        const dataId = updateForm.getAttribute('data-id');
+        let updateLink = updateForm.getAttribute('action');
+        let trueUpdateLink = updateLink.replace("{id}", String(dataId));
+        updateForm.setAttribute('action', trueUpdateLink);
+        console.log(updateForm);
+    </script>
 
 </body>
 

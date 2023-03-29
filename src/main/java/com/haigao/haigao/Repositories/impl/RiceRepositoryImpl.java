@@ -15,10 +15,9 @@ public class RiceRepositoryImpl implements RiceRepository {
     private JdbcTemplate tmpl;
 
     public RiceRepositoryImpl() {
-        try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class)) {
+        try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class)) {
             this.tmpl = context.getBean("JdbcTemplate", JdbcTemplate.class);
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -44,6 +43,34 @@ public class RiceRepositoryImpl implements RiceRepository {
     @Override
     public void save(RiceModel rice) {
         String query = "INSERT INTO RICE (name, image, kg, price, brand, description) VALUES(?, ?, ?, ?, ?, ?)";
-        tmpl.update(query, rice.getName(), rice.getImage(), rice.getKilograms(), rice.getPrice(), rice.getBrand(), rice.getDescription());
+        tmpl.update(query, rice.getName(), rice.getImage(), rice.getKilograms(), rice.getPrice(), rice.getBrand(),
+                rice.getDescription());
+    }
+
+    @Override
+    public RiceModel findById(int id) {
+        List<RiceModel> result = new ArrayList<RiceModel>();
+        String query = "SELECT * FROM RICE WHERE ID=?";
+
+        result = tmpl.query(query, (rs, i) -> {
+            RiceModel rice = new RiceModel();
+            rice.setId(rs.getInt("id"));
+            rice.setName(rs.getNString("name"));
+            rice.setBrand(rs.getNString("brand"));
+            rice.setImage(rs.getString("image"));
+            rice.setKilograms(rs.getDouble("kg"));
+            rice.setPrice(rs.getDouble("price"));
+            rice.setDescription(rs.getNString("description"));
+            return rice;
+        }, id);
+
+        return result.get(0);
+    }
+
+    @Override
+    public void update(RiceModel rice) {
+        String query = "UPDATE RICE SET NAME = ?, BRAND = ?, IMAGE = ?, KG = ?, PRICE = ?, DESCRIPTION = ? WHERE ID = ?";
+        tmpl.update(query, rice.getName(), rice.getBrand(), rice.getImage(), rice.getKilograms(), rice.getPrice(),
+                rice.getDescription(), rice.getId());
     }
 }

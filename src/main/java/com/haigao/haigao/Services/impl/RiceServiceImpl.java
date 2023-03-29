@@ -23,5 +23,15 @@ public class RiceServiceImpl implements RiceService {
     public void save(RiceModel rice) {
         riceRepository.save(rice);
     }
+
+    @Override
+    public RiceModel findById(int id) {
+        return riceRepository.findById(id);
+    }
+
+    @Override
+    public void update(RiceModel rice) {
+        riceRepository.update(rice);
+    }
     
 }

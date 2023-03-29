@@ -184,9 +184,8 @@
 
     <footer th:replace="layout/fragments :: footer"></footer>
     <script th:replace="layout/fragments :: script"></script>
-    <script>
-        formatPrice(".rice_col_price");
-    </script>
+    
+    <script type="module" th:src="@{/js/home.js}"></script>
 
 </body>
 
