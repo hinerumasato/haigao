@@ -60,7 +60,7 @@ public class AdminProductController {
     }
 
     @PutMapping(updateURL)
-    public RiceModel updateProduct(@RequestParam("name") String name, @RequestParam("price") double price, @RequestParam("description") String description, @RequestParam("brand") String brand, @RequestParam("kilograms") double kilograms, @RequestParam("image") MultipartFile image, @PathVariable("id") int id) {
+    public String updateProduct(HttpServletRequest request, @RequestParam("name") String name, @RequestParam("price") double price, @RequestParam("description") String description, @RequestParam("brand") String brand, @RequestParam("kilograms") double kilograms, @RequestParam("image") MultipartFile image, @PathVariable("id") int id) {
         riceService = new RiceServiceImpl();
         RiceModel oldRice = riceService.findById(id);
         try {
@@ -75,11 +75,11 @@ public class AdminProductController {
             RiceModel newRice = new RiceModel(name, path, kilograms, price, brand, description);
             newRice.setId(oldRice.getId());
             riceService.update(newRice);
-            return newRice;
+            return "redirect:" + request.getHeader("Referer");
         }
         catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return "redirect:" + request.getHeader("Referer");
     }
 }
